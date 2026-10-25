@@ -1,4 +1,5 @@
 # Personal Portfolio Website
+Updated portfolio using a feature branch.
 
 A responsive personal portfolio website built with **HTML5, CSS3, Bootstrap 5, and JavaScript**.
 
