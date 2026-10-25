@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vikas Saini | Portfolio</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ★ CUSTOM CURSOR ★ -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <!-- ★ ANIMATED STARFIELD CANVAS ★ -->
+    <canvas id="starfield"></canvas>
+
+    <!-- ★ GLOWING ORB BACKGROUND ACCENTS ★ -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <!-- ======================== NAVIGATION ======================== -->
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span class="brand-bracket">{</span>
+                <span class="brand-name">VS</span>
+                <span class="brand-bracket">}</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="toggler-line"></span>
+                <span class="toggler-line"></span>
+                <span class="toggler-line"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home"><span class="nav-num">01.</span>Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about"><span class="nav-num">02.</span>About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills"><span class="nav-num">03.</span>Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects"><span class="nav-num">04.</span>Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact"><span class="nav-num">05.</span>Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ======================== HOME / HERO ======================== -->
+    <section id="home" class="hero-section d-flex align-items-center min-vh-100">
+        <div class="container position-relative">
+            <div class="row align-items-center">
+                <div class="col-lg-7 hero-content">
+                    <div class="hero-greeting" data-aos>
+                        <span class="greeting-line"></span>
+                        <span class="greeting-text font-mono">Hello, World! I'm</span>
+                    </div>
+                    <h1 class="hero-name" data-aos data-delay="200">Vikas Saini</h1>
+                    <div class="hero-title-wrapper" data-aos data-delay="400">
+                        <span class="hero-title-static">I build </span>
+                        <span class="hero-title-dynamic" id="typed-text"></span>
+                        <span class="typed-cursor">_</span>
+                    </div>
+                    <p class="hero-desc" data-aos data-delay="600">
+                        A Computer Science undergraduate at <span class="gold-highlight">IIIT Nagpur</span>,
+                        specializing in Data Science & Analytics. Passionate about crafting
+                        elegant solutions through code.
+                    </p>
+                    <div class="hero-cta d-flex gap-3 flex-wrap" data-aos data-delay="800">
+                        <a href="#projects" class="btn-gold">
+                            <span class="btn-gold-text"><i class="bi bi-rocket-takeoff me-2"></i>View Projects</span>
+                            <span class="btn-gold-shine"></span>
+                        </a>
+                        <a href="#contact" class="btn-outline-gold">
+                            <i class="bi bi-chat-dots me-2"></i>Let's Talk
+                        </a>
+                    </div>
+                    <div class="hero-social" data-aos data-delay="1000">
+                        <div class="social-line"></div>
+                        <a href="https://github.com/Vikas345saini" target="_blank" class="social-icon" data-tooltip="GitHub">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/Vikas345saini/" target="_blank" class="social-icon" data-tooltip="LinkedIn">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                        <a href="https://instagram.com/vikas_87640" target="_blank" class="social-icon" data-tooltip="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <div class="social-line"></div>
+                    </div>
+                </div>
+                <div class="col-lg-5 text-center mt-5 mt-lg-0" data-aos data-delay="400">
+                    <div class="hero-visual">
+                        <div class="hex-frame">
+                            <div class="hex-inner">
+                                <div class="hex-glow"></div>
+                                <div class="hero-avatar">
+                                    <span class="avatar-initials">VS</span>
+                                </div>
+                            </div>
+                            <div class="hex-orbit">
+                                <div class="orbit-dot dot-1"></div>
+                                <div class="orbit-dot dot-2"></div>
+                                <div class="orbit-dot dot-3"></div>
+                            </div>
+                        </div>
+                        <!-- floating tech icons around avatar -->
+                        <div class="floating-icons">
+                            <span class="fl-icon fl-1"><i class="bi bi-filetype-py"></i></span>
+                            <span class="fl-icon fl-2"><i class="bi bi-filetype-js"></i></span>
+                            <span class="fl-icon fl-3"><i class="bi bi-git"></i></span>
+                            <span class="fl-icon fl-4"><i class="bi bi-braces"></i></span>
+                            <span class="fl-icon fl-5"><i class="bi bi-cpu"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Scroll indicator -->
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <span>Scroll Down</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== ABOUT ======================== -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="section-header" data-aos>
+                <span class="section-tag font-mono">// who am i?</span>
+                <h2 class="section-title">About <span class="gold">Me</span></h2>
+                <div class="title-decoration">
+                    <span class="td-line"></span>
+                    <span class="td-diamond">◆</span>
+                    <span class="td-line"></span>
+                </div>
+            </div>
+            <div class="row align-items-center g-5 mt-2">
+                <div class="col-lg-5" data-aos>
+                    <div class="about-card-3d">
+                        <div class="about-card-inner">
+                            <div class="about-card-front">
+                                <div class="id-card">
+                                    <div class="id-card-header">
+                                        <span class="id-logo">IIIT Nagpur</span>
+                                        <span class="id-badge">STUDENT</span>
+                                    </div>
+                                    <div class="id-card-avatar">
+                                        <span>VS</span>
+                                    </div>
+                                    <div class="id-card-info">
+                                        <h4>Vikas Saini</h4>
+                                        <p class="font-mono">BT24CSD047</p>
+                                        <p>B.Tech CSE — Data Science & Analytics</p>
+                                        <p class="id-year">Batch 2024–2028</p>
+                                    </div>
+                                    <div class="id-card-barcode">
+                                        <div class="barcode-lines"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos data-delay="200">
+                    <div class="about-text">
+                        <p class="about-intro">
+                            I am <span class="gold-highlight">Vikas Saini</span>, a Computer Science undergraduate 
+                            at the <span class="gold-highlight">Indian Institute of Information Technology, Nagpur</span>, 
+                            specializing in Data Science and Analytics.
+                        </p>
+                        <p>
+                            I am interested in software development, machine learning, and building practical 
+                            applications. I enjoy solving problems, exploring new technologies, and applying my 
+                            knowledge through academic and personal projects.
+                        </p>
+                        <div class="about-details">
+                            <div class="detail-item">
+                                <i class="bi bi-mortarboard"></i>
+                                <div>
+                                    <span class="detail-label">Degree</span>
+                                    <span class="detail-value">B.Tech CSE (Data Science)</span>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="bi bi-geo-alt"></i>
+                                <div>
+                                    <span class="detail-label">Hometown</span>
+                                    <span class="detail-value">Jaipur, Rajasthan</span>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="bi bi-calendar-check"></i>
+                                <div>
+                                    <span class="detail-label">Graduation</span>
+                                    <span class="detail-value">2028</span>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="bi bi-envelope"></i>
+                                <div>
+                                    <span class="detail-label">Email</span>
+                                    <span class="detail-value">bt24csd047@iiitn.ac.in</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#contact" class="btn-gold mt-4">
+                            <span class="btn-gold-text"><i class="bi bi-download me-2"></i>Download CV</span>
+                            <span class="btn-gold-shine"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== SKILLS ======================== -->
+    <section id="skills" class="section-padding section-dark">
+        <div class="container">
+            <div class="section-header" data-aos>
+                <span class="section-tag font-mono">// what I know</span>
+                <h2 class="section-title">My <span class="gold">Skills</span></h2>
+                <div class="title-decoration">
+                    <span class="td-line"></span>
+                    <span class="td-diamond">◆</span>
+                    <span class="td-line"></span>
+                </div>
+            </div>
+
+            <!-- Skill Orbit Visual -->
+            <div class="skills-grid mt-5">
+                <!-- Frontend -->
+                <div class="skill-category" data-aos>
+                    <div class="category-header">
+                        <i class="bi bi-palette"></i>
+                        <h5>Front-End</h5>
+                    </div>
+                    <div class="skill-pills">
+                        <div class="skill-pill" data-level="95">
+                            <div class="pill-icon"><i class="bi bi-filetype-html"></i></div>
+                            <span>HTML5</span>
+                            <div class="pill-glow"></div>
+                            <div class="pill-progress" style="--progress: 95%"></div>
+                        </div>
+                        <div class="skill-pill" data-level="90">
+                            <div class="pill-icon"><i class="bi bi-filetype-css"></i></div>
+                            <span>CSS3</span>
+                            <div class="pill-glow"></div>
+                            <div class="pill-progress" style="--progress: 90%"></div>
+                        </div>
+                        <div class="skill-pill" data-level="85">
+                            <div class="pill-icon"><i class="bi bi-filetype-js"></i></div>
+                            <span>JavaScript</span>
+                            <div class="pill-glow"></div>
+                            <div class="pill-progress" style="--progress: 85%"></div>
+                        </div>
+                        <div class="skill-pill" data-level="85">
+                            <div class="pill-icon"><i class="bi bi-filetype-tsx"></i></div>
+                            <span>TypeScript</span>
+                            <div class="pill-glow"></div>
+                            <div class="pill-progress" style="--progress: 85%"></div>
+                        </div>
+                        <div class="skill-pill" data-level="88">
+                            <div class="pill-icon"><i class="bi bi-bootstrap"></i></div>
+                            <span>Bootstrap</span>
+                            <div class="pill-glow"></div>
+                            <div class="pill-progress" style="--progress: 88%"></div>
+                        </div>
+                        <div class="skill-pill" data-level="82">
+                            <div class="pill-icon"><i class="bi bi-wind"></i></div>
+                            <span>Tailwind</span>
+                            <div class="pill-glow"></div>
+                            <div class="pill-progress" style="--progress: 82%"></div>
+                        </div>
+                        <div class="skill-pill" data-level="80">
+                            <div class="pill-icon"><i class="bi bi-atom"></i></div>
+                            <span>React.js</span>
+                            <div class="pill-glow"></div>
+                            <div class="pill-progress" style="--progress: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="skill-category" data-aos data-delay="200">
+                    <div class="category-header">
+                        <i class="bi bi-server"></i>
+                        <h5>Back-End</h5>
+                    </div>
+                    <div class="skill-pills">
+                        <div class="skill-pill" data-level="80">
+                            <div class="pill-icon"><i class="bi bi-node-plus"></i></div>
+                            <span>Node.js</span>
+                            <div class="pill-glow"></div>
+                            <div class="pill-progress" style="--progress: 80%"></div>
+                        </div>
+                        <div class="skill-pill" data-level="78">
+                            <div class="pill-icon"><i class="bi bi-hdd-network"></i></div>
+                            <span>Express</span>
+                            <div class="pill-glow"></div>
+                            <div class="pill-progress" style="--progress: 78%"></div>
+                        </div>
+                        <div class="skill-pill" data-level="82">
+                            <div class="pill-icon"><i class="bi bi-filetype-py"></i></div>
+                            <span>Python</span>
+                            <div class="pill-glow"></div>
+                            <div class="pill-progress" style="--progress: 82%"></div>
+                        </div>
+                        <div class="skill-pill" data-level="75">
+                            <div class="pill-icon"><i class="bi bi-filetype-java"></i></div>
+                            <span>Java</span>
+                            <div class="pill-glow"></div>
+                            <div class="pill-progress" style="--progress: 75%"></div>
+                        </div>
+                        <div class="skill-pill" data-level="72">
+                            <div class="pill-icon"><i class="bi bi-file-earmark-code"></i></div>
+                            <span>C / C++</span>
+                            <div class="pill-glow"></div>
+                            <div class="pill-progress" style="--progress: 72%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Database & Tools -->
+                <div class="skill-category" data-aos data-delay="400">
+                    <div class="category-header">
+                        <i class="bi bi-tools"></i>
+                        <h5>Database & Tools</h5>
+                    </div>
+                    <div class="skill-pills">
+                        <div class="skill-pill" data-level="78">
+                            <div class="pill-icon"><i class="bi bi-database"></i></div>
+                            <span>MySQL</span>
+                            <div class="pill-glow"></div>
+                            <div class="pill-progress" style="--progress: 78%"></div>
+                        </div>
+                        <div class="skill-pill" data-level="75">
+                            <div class="pill-icon"><i class="bi bi-database-gear"></i></div>
+                            <span>MongoDB</span>
+                            <div class="pill-glow"></div>
+                            <div class="pill-progress" style="--progress: 75%"></div>
+                        </div>
+                        <div class="skill-pill" data-level="90">
+                            <div class="pill-icon"><i class="bi bi-git"></i></div>
+                            <span>Git</span>
+                            <div class="pill-glow"></div>
+                            <div class="pill-progress" style="--progress: 90%"></div>
+                        </div>
+                        <div class="skill-pill" data-level="88">
+                            <div class="pill-icon"><i class="bi bi-github"></i></div>
+                            <span>GitHub</span>
+                            <div class="pill-glow"></div>
+                            <div class="pill-progress" style="--progress: 88%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== PROJECTS ======================== -->
+    <section id="projects" class="section-padding">
+        <div class="container">
+            <div class="section-header" data-aos>
+                <span class="section-tag font-mono">// things I've built</span>
+                <h2 class="section-title">My <span class="gold">Projects</span></h2>
+                <div class="title-decoration">
+                    <span class="td-line"></span>
+                    <span class="td-diamond">◆</span>
+                    <span class="td-line"></span>
+                </div>
+            </div>
+
+            <div class="projects-showcase mt-5">
+
+                <!-- Project 1: LegalSolution (Featured — Large) -->
+                <div class="project-featured" data-aos>
+                    <div class="row g-0 align-items-center">
+                        <div class="col-lg-7">
+                            <div class="project-preview">
+                                <div class="preview-browser">
+                                    <div class="browser-dots">
+                                        <span class="dot red"></span>
+                                        <span class="dot yellow"></span>
+                                        <span class="dot green"></span>
+                                    </div>
+                                    <span class="browser-url font-mono">legalsolution.app</span>
+                                </div>
+                                <div class="preview-screen">
+                                    <div class="code-rain">
+                                        <div class="project-icon-large">
+                                            <i class="bi bi-briefcase"></i>
+                                        </div>
+                                        <h3 class="preview-title">LegalSolution</h3>
+                                        <p class="preview-sub">Legal Assistance Platform</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="project-info-panel">
+                                <span class="project-label font-mono">Featured Project</span>
+                                <h3 class="project-name">LegalSolution</h3>
+                                <div class="project-desc-box">
+                                    <p>Contributed to the frontend development of a legal-assistance platform 
+                                    featuring legal queries, startup compliance, civil issues, and dispute 
+                                    resolution pages. Built reusable components and responsive user interfaces.</p>
+                                </div>
+                                <div class="project-tech">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JavaScript</span>
+                                    <span>React</span>
+                                    <span>Bootstrap</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://github.com/Vikas345saini" target="_blank"><i class="bi bi-github"></i></a>
+                                    <a href="#"><i class="bi bi-box-arrow-up-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 & 3: Side by side -->
+                <div class="row g-4 mt-4">
+                    <div class="col-md-6" data-aos data-delay="200">
+                        <div class="project-card-modern">
+                            <div class="pcard-header">
+                                <i class="bi bi-folder2-open pcard-folder"></i>
+                                <div class="pcard-links">
+                                    <a href="https://github.com/Vikas345saini" target="_blank"><i class="bi bi-github"></i></a>
+                                    <a href="#"><i class="bi bi-box-arrow-up-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="pcard-body">
+                                <h4>Resale Mobile Price Prediction</h4>
+                                <p>Developed a machine-learning workflow to predict second-hand mobile phone 
+                                prices based on device specifications and usage data. Worked on data 
+                                preprocessing, feature engineering, and comparing prediction models.</p>
+                            </div>
+                            <div class="pcard-tech font-mono">
+                                <span>Python</span>
+                                <span>ML</span>
+                                <span>Pandas</span>
+                                <span>Scikit-learn</span>
+                            </div>
+                            <div class="pcard-glow"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6" data-aos data-delay="400">
+                        <div class="project-card-modern">
+                            <div class="pcard-header">
+                                <i class="bi bi-folder2-open pcard-folder"></i>
+                                <div class="pcard-links">
+                                    <a href="https://github.com/Vikas345saini" target="_blank"><i class="bi bi-github"></i></a>
+                                    <a href="#"><i class="bi bi-box-arrow-up-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="pcard-body">
+                                <h4>SecurePix — Image Steganography</h4>
+                                <p>Building a privacy-focused application that combines image steganography 
+                                and encryption to hide information within images securely. Features 
+                                LSB encoding and AES encryption layers.</p>
+                            </div>
+                            <div class="pcard-tech font-mono">
+                                <span>Python</span>
+                                <span>Cryptography</span>
+                                <span>OpenCV</span>
+                                <span>Steganography</span>
+                            </div>
+                            <div class="pcard-status">
+                                <span class="status-badge"><i class="bi bi-gear-wide-connected me-1"></i>In Progress</span>
+                            </div>
+                            <div class="pcard-glow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== CONTACT ======================== -->
+    <section id="contact" class="section-padding section-dark">
+        <div class="container">
+            <div class="section-header" data-aos>
+                <span class="section-tag font-mono">// get in touch</span>
+                <h2 class="section-title">Contact <span class="gold">Me</span></h2>
+                <div class="title-decoration">
+                    <span class="td-line"></span>
+                    <span class="td-diamond">◆</span>
+                    <span class="td-line"></span>
+                </div>
+            </div>
+            <div class="row g-5 mt-2">
+                <div class="col-lg-5" data-aos>
+                    <div class="contact-left">
+                        <h3>Let's work <span class="gold">together.</span></h3>
+                        <p class="text-muted-custom">
+                            Have a project in mind or just want to say hi?
+                            My inbox is always open.
+                        </p>
+
+                        <div class="contact-cards">
+                            <div class="contact-card-item">
+                                <div class="cci-icon"><i class="bi bi-envelope-at"></i></div>
+                                <div>
+                                    <span class="cci-label">Email</span>
+                                    <a href="mailto:bt24csd047@iiitn.ac.in" class="cci-value">bt24csd047@iiitn.ac.in</a>
+                                </div>
+                            </div>
+                            <div class="contact-card-item">
+                                <div class="cci-icon"><i class="bi bi-geo-alt"></i></div>
+                                <div>
+                                    <span class="cci-label">Location</span>
+                                    <span class="cci-value">Jaipur, Rajasthan · IIIT Nagpur</span>
+                                </div>
+                            </div>
+                            <div class="contact-card-item">
+                                <div class="cci-icon"><i class="bi bi-mortarboard"></i></div>
+                                <div>
+                                    <span class="cci-label">Status</span>
+                                    <span class="cci-value">Open for Internships & Collaborations</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-socials">
+                            <a href="https://github.com/Vikas345saini" target="_blank" class="cs-link">
+                                <i class="bi bi-github"></i><span>GitHub</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/Vikas345saini/" target="_blank" class="cs-link">
+                                <i class="bi bi-linkedin"></i><span>LinkedIn</span>
+                            </a>
+                            <a href="https://instagram.com/vikas_87640" target="_blank" class="cs-link">
+                                <i class="bi bi-instagram"></i><span>Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos data-delay="200">
+                    <form id="contactForm" class="contact-form" novalidate>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-group-custom">
+                                    <input type="text" id="name" required placeholder=" ">
+                                    <label for="name"><i class="bi bi-person me-2"></i>Your Name</label>
+                                    <span class="input-border"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group-custom">
+                                    <input type="email" id="email" required placeholder=" ">
+                                    <label for="email"><i class="bi bi-envelope me-2"></i>Your Email</label>
+                                    <span class="input-border"></span>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group-custom">
+                                    <input type="text" id="subject" required placeholder=" ">
+                                    <label for="subject"><i class="bi bi-chat-left-text me-2"></i>Subject</label>
+                                    <span class="input-border"></span>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group-custom">
+                                    <textarea id="message" rows="5" required placeholder=" "></textarea>
+                                    <label for="message"><i class="bi bi-pencil me-2"></i>Message</label>
+                                    <span class="input-border"></span>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn-gold w-100 submit-btn">
+                                    <span class="btn-gold-text">
+                                        <i class="bi bi-send me-2"></i>Send Message
+                                    </span>
+                                    <span class="btn-gold-shine"></span>
+                                </button>
+                            </div>
+                        </div>
+                        <div id="formAlert" class="form-success d-none">
+                            <i class="bi bi-check-circle-fill me-2"></i>
+                            Message sent! I'll get back to you soon.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== FOOTER ======================== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="brand-bracket">{</span>
+                    <span class="brand-name">VS</span>
+                    <span class="brand-bracket">}</span>
+                </div>
+                <p class="footer-text">
+                    Designed & Built by <span class="gold">Vikas Saini</span>
+                </p>
+                <p class="footer-sub font-mono">
+                    &copy; 2026 · Made with <i class="bi bi-heart-fill text-danger"></i> and lots of ☕
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="backToTop" title="Back to Top">
+        <i class="bi bi-chevron-double-up"></i>
+    </button>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
